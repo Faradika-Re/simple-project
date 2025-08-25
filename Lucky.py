@@ -1,6 +1,6 @@
 import random
 
-# i wanna creat a program that generates random word from a array
+# i wanna create a program that generates random word from a array
 while True:
     choice = input("Do you want to try your luck? (yes/no): ").lower()
     if choice == 'yes' or choice == 'y':
@@ -12,4 +12,5 @@ while True:
         break
     else:
         print("Invalid input. Please enter 'yes' or 'no'.")
+
         continue
