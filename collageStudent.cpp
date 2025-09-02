@@ -8,38 +8,31 @@
 #include <cctype>
 using namespace std;
 
-// buat program menghitung IP dan predikat mahasiswa
+// Make a program count GPA and Predicate of Collage Student
 int main () {
     int totalStudent, totalMk;
-    cout << "Ada berapa mahasiswa yang ada terdaftar di Fasilkom: ";
+    cout << "How many are student at your faculty: ";
     cin >> totalStudent;
-    cout << "Ada berapa total mata kuliah pada setiap mahasiswa: ";
+    cout << "How many are subjects at every student: ";
     cin >> totalMk;
 
     string student[totalStudent];
     string studentMk[totalMk];
 
-    // Catat kerjain bre!
-    // Usahain tanpa AI GBLK
     for (int i = 1; i <= totalStudent; i++) {
         string studentName;
-        cout << "Masukkan nama mahasiswa Fasilkom: ";
-        // function append itu menambah string
+        cout << "Input the student name: ";
         cin >> student[i-1].append(studentName);
         cout << '\t' << student[i-1] << endl;
 
-        // Nama matkul dan sebutin nilainya 
+        // Subject name and rate it
         for (int j = 1; j <= totalMk; j++) {
             float ipkList[totalMk];
-
-            // Napa ga ipk kau jadiin array aja?
             string collSubjectName;
-            cout << '\t' << "Masukkan mata kuliah (Usahakan jangan menggunakan spasi): ";
-            // Pertanyaan bagus
-            // Gimana caranya agar input masih bisa memakai spasi?
+            cout << '\t' << "Input a subject name (Don't use space): ";
             cin >> studentMk[j-1].append(collSubjectName);
             cout << '\t' << " - " << studentMk[j-1] << ": " << endl;
-            cout << '\t' << "Masukkan nilai: ";
+            cout << '\t' << "Input the subject name: ";
             cin >> ipkList[j-1];
 
             if (j == totalMk) {
@@ -48,8 +41,8 @@ int main () {
                     mean += ipkList[k-1];
                 }
                 mean /= totalMk;
-                cout << '\t' << "IP rerata minggu ini ialah: " << mean << endl;
-                cout << '\t' << "Predikat ";
+                cout << '\t' << "Rate of weekly student GPA: " << mean << endl;
+                cout << '\t' << "Predicate ";
 
                 // Pake if, kalo mau membaca rentang nilai
                 if (mean <= 100 && mean >= 80) {
@@ -73,4 +66,5 @@ int main () {
             }
         }
     }
+
 }
